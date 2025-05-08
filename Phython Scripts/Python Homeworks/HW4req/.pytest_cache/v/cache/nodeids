@@ -1,0 +1,16 @@
+[
+  "test_01.py::Test::test01_example",
+  "test_01.py::Test::test02_example",
+  "test_01.py::Test::test03_example",
+  "test_01.py::Test::test04_example",
+  "test_01.py::Test::test05_example",
+  "test_01.py::Test::test06_example",
+  "test_01.py::Test::test07_example",
+  "test_01.py::Test::test08_example",
+  "test_01.py::Test::test09_example",
+  "test_01.py::Test::test10_example",
+  "test_01.py::Test::test_intricacy",
+  "test_01.py::Test::test_no_globals_or_mutable_args",
+  "test_01.py::Test::test_untampered_types",
+  "test_01.py::Test::test_zz_top_types"
+]

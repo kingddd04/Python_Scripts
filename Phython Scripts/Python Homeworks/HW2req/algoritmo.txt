@@ -1,0 +1,90 @@
+Creato su notepad++
+
+"""
+Ciao! questa è la mia spiegazione del mio codice python, ti auguro una buona lettura, mi scuso in anticipo 
+per eventuali errori o per la mia insufficiente capacità esplicativa.
+Iniziamo impostando le variabili richieste dall'esercizio, digits e bases, le impostiamo come liste 
+poichè devono contenere più valori numerici
+"""
+
+digits = []
+bases = []
+
+"""
+Definiamo una funzione con due argomenti digits e bases, anticipiamo alla funzione che 
+avrà in input due liste di interi e dovrà restituire un numero intero. 
+Impostiamo una var n a 0 e una var Decoded_Digits a 0, n sarà il nostro elevatore a potenza variabile,
+mentre Decoded_Digits sarà la nostra variabile che conterrà il risultato.
+Il nostro for per ciascuno degli elementi numerici in digits e bases (chiamati digit e base), essi sono messi
+in parallelo da .zip(), che consente ad entrambi di essere considerati dal for; il for eseguira l'operazione 
+Decoded_Digits= (digit*base**n)+Decoded_Digits (il calcolo richiesto dall'esercizio)
+e incrementerà la var n che è l'elevazione a potenza che aumenterà di uno a ogni ciclo;
+(n non viene ripristinata a 0 a ogni ciclo siccome è salvata al di fuori del for)
+il loop continuerà fino a quando ciascuno degli elementi nelle liste non sia stato processato dopodichè il return 
+restituirà il risultato
+"""
+
+def decode_digits(digits: list[int], bases:list[int])->int:
+    n=0
+    Decoded_Digits=0
+    for digit, base in zip(digits, bases):
+        Decoded_Digits= (digit*base**n)+Decoded_Digits
+        n=n+1
+    return Decoded_Digits
+	
+"""	
+generate_digits genera tutte le possibili combinazioni di cifre possibili con le basi date,
+la funzione accetta una variabile che è una lista di bases e ci restituisce una lista di liste contenenti interi.
+generate_combinations(combination, base): crea un altra funzione ricorsiva con gli argomenti combination e base
+Se base è uguale alla lunghezza delle "bases", significa che abbiamo generato tutte le cominazioni,
+l'if la aggiunge a Generated_Combinations tramite append, che aggiunge un valore alla fine della lista 
+Generated_Combinations La variabile current_base contiene la base corrente in base all'indice base.
+quindi la combinazione è completa, e la aggiunge a Generated_Combinations.La funzione itera attraverso
+le cifre da 0 a current_base - 1 (dove current_base è la base corrente da bases).Aggiunge ciascuna cifra
+a combination, quindi richiama se stessa aumentando base di 1.
+Dopo la chiamata ricorsiva, rimuove l'ultima cifra aggiunta da combination utilizzando combination.pop().
+Alla fine, la funzione restituisce Generated_Combinations, che è la lista di tutte le possibili combinazioni.
+La variabile current_base contiene la base corrente in base all'indice base.
+Il return restituisce la lista di combinazioni
+
+"""
+
+def generate_digits(bases : list[int] ) -> list[list[int]]:
+    def generate_combinations(combination, base):
+        if base == len(bases):
+            Generated_Combinations.append(combination[:])
+            return
+        current_base = bases[base]
+        for digit in range(current_base):
+            combination.append(digit)
+            generate_combinations(combination, base+ 1)
+            combination.pop()
+
+    Generated_Combinations = []
+    generate_combinations([], 0)
+    return Generated_Combinations  
+	
+"""
+find_doubles con argomento bases trova gli interi che compaiono più volte, anche qui la funzone ci restituisce una lista di interi, la funzione ha 
+come argomento bases.
+Combinations ha come valore l'output di generate_digits(bases) contiene quindi tutte le nostre combinazioni di numeri.
+Poi dichiariamo due insiemi, uno per i numeri generati dall'output(seen numbers) e uno per i numeri ricorrenti trovati più volte Found_Doubles.
+Per ciascuna delle combinazioni in combinations viene creata una variable integer che viene ricavata da 
+generate digits usata con al posto di digits combination ovvero la nostra combinazione che  viene processata al momento.
+infine se la variabile integer è già presente nell'insieme degli elementi già visti, 
+.add la aggiunge al gruppo dei numeri trovati più volte Found_Doubles
+in ogni caso la variabile integer viene aggiunta all' insieme degli elementi già osservati.
+Il return restituisce in output l'insieme dei numeri già trovati e conclude la terza funzione e l'esercizio.
+Grazie per l'attenzione!
+"""
+
+def find_doubles(bases : list[int]) -> set[int]:
+   combinations = generate_digits(bases)
+   Seen_numbers = set()
+   Found_Doubles = set()
+   for combination in combinations:
+       integer = decode_digits(combination, bases)
+       if integer in Seen_numbers:
+           Found_Doubles.add(integer)
+       Seen_numbers.add(integer)
+   return Found_Doubles

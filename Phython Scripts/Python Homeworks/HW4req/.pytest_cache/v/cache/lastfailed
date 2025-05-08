@@ -1,0 +1,12 @@
+{
+  "test_01.py::Test::test01_example": true,
+  "test_01.py::Test::test02_example": true,
+  "test_01.py::Test::test03_example": true,
+  "test_01.py::Test::test04_example": true,
+  "test_01.py::Test::test05_example": true,
+  "test_01.py::Test::test06_example": true,
+  "test_01.py::Test::test07_example": true,
+  "test_01.py::Test::test08_example": true,
+  "test_01.py::Test::test09_example": true,
+  "test_01.py::Test::test10_example": true
+}

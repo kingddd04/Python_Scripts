@@ -1,0 +1,14 @@
+l'esame si svolge in laboratorio (2.5-3 ore per circa 7 esercizi cosi suddivisi: 4 sono esercizi "func" 
+banali---da func1 a func4. Allenatevi a farli velocemente! Poi vi e' un esercizio func5 piu difficile 
+solitamente sulle immagini; e 2 esercizi "ex" ricorsivi)
+
+----
+
+si è ammessi all'esame solo se sufficienti (voto >=16) in ciascuno dei 4 Homework (obbligatori o di recupero) (vedi sotto)
+il voto finale da verbalizzare è la media pesata tra:
+il voto medio degli Homework obbligatori compreso di bonus (che pesa per 1/3)
+e quello ottenuto nella prova d'esame in laboratorio (almeno 18 e fino a 32, che pesa per 2/3)
+Esempio: se negli HW si sono ottenuti i voti 20, 32, 20, 24 (che danno media 24/30) più un bonus complessivo di 1.5 ed all'esame si è ottenuto il voto 31, il voto finale sarà (24+1.5)/3 + 2*31/3 = 29.16 che si arrotonda a 29
+voti finali superiori a 30 vengono verbalizzati come 30 e lode
+gli esercizi d'esame sono più semplici degli homework per casa, quasi tutti gli esercizi d'esame degli anni 
+passati sono disponibili sul sito (con correzione automatica e soluzioni)
