@@ -1,6 +1,7 @@
 # 🐍 Python Scripts
 
-Welcome to the **Python Scripts** repository! This directory is a collection of all the Python files I created during my personal learning journey and academic studies at the University of Rome "La Sapienza". 🎓 It was instrumental in preparing for and passing the **Foundations and Basics of Programming in Python** course. ✅
+Welcome to the **Python Scripts** repository! This directory is a collection of all the Python files I created during my personal learning journey and academic studies at the University of Rome "La Sapienza" since 15/01/2024 at 23:08 . 🎓 It was instrumental in preparing for and passing the **Foundations and Basics of Programming in Python** course. ✅
+
 
 ---
 
