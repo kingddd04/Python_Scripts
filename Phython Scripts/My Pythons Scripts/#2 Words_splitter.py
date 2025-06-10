@@ -4,7 +4,7 @@ Created on Wed Jun 12 18:34:49 2024
 
 @author: david
 """
-# Printiamo l'interfaccia utente
+
 print("----------------------\n")
 print("Words Splitter 12.0\n")
 print("----------------------\n")
